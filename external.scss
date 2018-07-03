@@ -217,6 +217,10 @@ header {
     background: $default-background-color;
   }
 
+  .collapsed {
+     border-radius: 20px;
+  }
+
 }
 
 /* Category */
@@ -247,33 +251,29 @@ header {
       position: relative;
       width: 89%;
     }
-
-    .expand-btn::after { //plus btn
-      
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      content: "\f067";
-      color: $color-c;
-      font-size: 1.1em;
-      margin: 3px;
-      top: 0;
-    }
-
-    .collapse-btn::after { //plus btn
-      float: right;
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      content: "\f068";
-      color: #ddd;
-      font-size: 1.1em;
-      margin: 3px;
-      top: 0;
-    }
-
-    .category-item-link:last-child {
-      
-    }
+    
   }
+}
+
+/* collapsible category buttons */
+
+.cat-expand-btn::after { //plus btn
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f067";
+  color: $color-c;
+  font-size: 1.1em;
+  margin: 3px;
+}
+
+.cat-collapse-btn::after { //plus btn
+  float: right;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f068";
+  color: #ddd;
+  font-size: 1.1em;
+  margin: 3px;
 }
 
 /* Menu */
@@ -291,14 +291,30 @@ header {
     border-radius: 20px 20px 10px 10px;
   }
 
+  .card-header:hover {
+    cursor: pointer;
+  }
+
   .card-header p {
     font-weight: 400;
   }
 
-  .card-header:before {
-    font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\f067";
+  .menu-expand-btn::before { //plus btn
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f067";
     color: $color-w;
     float: right;
+    margin: 5px;
+  }
+
+  .menu-collapse-btn::after { //plus btn
+    float: right;
+    color: $color-w;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f068";
+    margin: 5px;
   }
 
   .menu-item {
